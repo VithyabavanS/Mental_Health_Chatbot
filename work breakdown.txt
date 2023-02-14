@@ -1,0 +1,10 @@
+The things we need to do 
+1. chatbot
+	i.   voice typing            - Sithuli
+	ii.  NLP		     - Vithyabavan / Enuka
+	iii. Adding games and music  - lahiru 
+	iv.  CNN 		     - Vithyabavan / Enuka	
+2. ui/ux
+3. login pages 
+4. home page - sithuli   
+5. Adding profile pages - Shasindu     
