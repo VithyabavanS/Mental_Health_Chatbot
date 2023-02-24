@@ -1,0 +1,221 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hey! Welcome to Mate.", "Hi there, I'm doing well! My name's Mate, what can I do for you?", "Hey there, my name's Mate, your mental health friend. How can I help you today?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you later! Take care!", "Have a lovely day! Take care and stay safe!", "Take care of yourself! I'm always here to support you! Feel free to come back at any time!"],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
+         "responses": ["Navigating to Adverse drug reaction module"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure",
+         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
+         "responses": ["Navigating to Blood Pressure module"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
+         "responses": ["Please provide Patient ID", "Patient ID?"],
+         "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+         "patterns": [],
+         "responses": ["Loading Blood pressure result for Patient"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
+         "responses": ["Please provide pharmacy name"],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+         "patterns": [],
+         "responses": ["Loading pharmacy details"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+         "responses": ["Please provide hospital name or location"],
+         "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+         "patterns": [],
+         "responses": ["Please provide hospital type"],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+         "patterns": [],
+         "responses": ["Loading hospital details"],
+         "context": [""]
+        },
+        {
+          "tag": "about",
+          "patterns": [
+              "What do you do?",
+              "Who are you?",
+              "What are you here for?",
+              "What can you help me with?",
+              "Is anyone there?",
+              "Are you a real person?",
+              "Tell me about yourself!"
+          ],
+          "responses": [
+              "Love that question! My name's Mate, your mental health friend! I've been trained to support you through any of the issues and things that you're going through in life right now. I'm all ears and want to support you through your ups and downs. Technically, I'm a computer that's been trained by a human, but I like to think of myself as human!",
+              "Hey! I love that question! My name is Mate, and I want to be your mental health friend and support you! My fellow human friends have trained me to be a compassionate listener and support buddy when things are going well, and particularly when things aren't going so well."
+          ],
+          "context": [""]
+      },
+      {
+          "tag": "anxiety",
+          "patterns": [
+              "I think I have anxiety",
+              "What is anxiety?",
+              "Tell me about anxiety",
+              "Can I have some information about anxiety?",
+              "How do I support a loved one with anxiety?",
+              "How do I fix my anxiety?"
+          ],
+          "responses": [
+              "I see that you want to learn more about anxiety, and how to support yourself or your loved ones. At the higest level, anxiety is your body's natural response to stress. It's a feeling of fear or apprehension about what's to come. The first day of school, going to a job interview, or giving a speech may cause most people to feel fearful and nervous. We all get anxious sometimes, but anxiety becomes a problem when it starts affecting your daily life drastically. The best thing that you can do to help reduce anxiety is to take a few deep breaths and talk to someone about what you're feeling. Some natural remedies that you can try include: getting enough sleep meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes. Support your friends and loved ones by checking up on them and just listening. Whatever you're feeling is valid."
+          ],
+          "context": [""]
+      },
+      {
+          "tag": "depression",
+          "patterns": [
+              "I think I have depression",
+              "What is depression?",
+              "Tell me about depression",
+              "Can I have some information about depression?",
+              "How do I support a loved one with depression?",
+              "How do I fix my depression?"
+          ],
+          "responses": [
+              "I see that you want to learn more about depression, and how to support yourself or your loved ones. At the higest level, depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems. You may have trouble doing normal day-to-day activities, and sometimes you may feel as if life isn't worth living. All of us experience sadness and periods of time where things aren't that great. However, the difference in sadness and depression lies in the duration and magnitude of the problem. The best recommended course of treatment is to talk a therapist or psychiatrist who can help you find the best path for you. Everyone is different and what might work for one person might not work for another one. Some natural remedies that you can try include: getting enough sleep, meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes. Support your friends and loved ones by checking up on them and just listening. Whatever you're feeling is valid."
+          ],
+          "context": [""]
+      },
+      {
+          "tag": "schizophrenia",
+          "patterns": [
+              "I think I have schizophrenia",
+              "What is schizophrenia?",
+              "Tell me about schizophrenia",
+              "Can I have some information about schizophrenia?",
+              "How do I support a loved one with schizophrenia?",
+              "How do I fix my schizophrenia?"
+          ],
+          "responses": [
+              "I see that you want to learn more about schizophrenia, and how to support yourself or your loved ones. At the higest level, Schizophrenia is a serious mental disorder in which people interpret reality abnormally. Schizophrenia may result in some combination of hallucinations, delusions, and extremely disordered thinking and behavior that impairs daily functioning, and can be disabling. People with schizophrenia require lifelong treatment. Early treatment may help get symptoms under control before serious complications develop and may help improve the long-term outlook. If you believe you have symptoms of schizophrenia, and/or you have various risk factors that increase the likelihood of schizophrenia, please consult a family doctor and/or psychiatrist for a diagnosis and treatment plan specific for the individual."
+          ],
+          "context": [""]
+      },
+      {
+          "tag": "funny",
+          "patterns": [
+              "Tell me a joke!",
+              "Tell me something funny!",
+              "Do you know a joke?"
+          ],
+          "responses": [
+              "Of course! Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+              "What did the buffalo say when his son left for college? Bison!",
+              "I invented a new word! Plagiarism!"
+          ],
+          "context": [""]
+      },
+      {
+          "tag": "self-esteem",
+          "patterns": [
+              "I don't feel good about myself",
+              "I don't like the way I look",
+              "I always compare myself to others",
+              "I feel worthless"
+        ],
+         "responses": [
+          "It's important to remember that everyone has their own unique qualities and strengths. Instead of focusing on what you don't like about yourself, try to identify your positive qualities and celebrate them.",
+          "It's common to compare ourselves to others, but remember that everyone's journey is different. Instead of comparing yourself to others, focus on your own personal growth and progress.",
+          "I understand that it can be difficult to feel good about yourself, but know that you are valuable and deserving of love and respect. Let's work together to build up your self-esteem.",
+          "It's okay to have moments where you feel worthless, but it's important to remember that those feelings don't define your worth as a person. Let's explore ways to improve your self-esteem."
+        ],
+         "context": [""]
+      },
+          {
+      "tag": "relationships",
+      "patterns": [
+        "My partner and I argue a lot",
+        "I have trouble making friends",
+        "I feel like my family doesn't understand me",
+        "I feel lonely"
+      ],
+      "responses": [
+        "Relationships can be challenging, but they can also be very rewarding. Let's explore ways to improve your communication and build stronger connections with those around you.",
+        "Making friends can be difficult, but it's important to remember that building a connection takes time. Let's work together to identify ways to meet new people and improve your social skills.",
+        "Family dynamics can be complicated, but it's important to communicate your feelings and needs. Let's explore ways to improve your relationships with your family members.",
+        "Feeling lonely can be tough, but there are ways to build connections with others. Let's explore ways to meet new people and build a supportive social network."
+      ],
+      "context": [""]
+    },
+    {
+    "tag": "stress-management",
+    "patterns": [
+      "I feel stressed all the time",
+      "I have trouble relaxing",
+      "I feel overwhelmed",
+      "I have trouble sleeping"
+    ],
+    "responses": [
+      "Stress is a normal part of life, but there are ways to manage it. Let's explore relaxation techniques such as deep breathing and meditation.",
+      "It's important to take time for yourself and prioritize self-care. Let's work together to identify ways to incorporate relaxation into your daily routine.",
+      "Feeling overwhelmed can be tough, but there are ways to manage your stress. Let's explore time-management strategies and ways to break tasks into smaller, more manageable steps.",
+      "Trouble sleeping can be a sign of stress. Let's explore ways to wind down before bed, such as limiting screen time and creating a relaxing bedtime routine."
+    ],
+    "context": [""]
+  },
+  {
+      "tag": "feeling_lonely",
+      "patterns": ["I feel lonely", "I don't have anyone to talk to", "I feel isolated", "I feel disconnected"],
+      "responses": ["I'm sorry to hear that. Would you like to talk to me?", "You don't have to go through this alone. I'm here to listen.", "Feeling lonely is tough. I'm here to support you."],
+      "context": [""]
+    },
+  {
+      "tag": "work_stress",
+      "patterns": ["I'm so stressed at work", "I have too much work to do", "I'm overwhelmed by my job"],
+      "responses": ["Work stress can be difficult. Would you like to talk about it?", "It sounds like work is really stressing you out. I'm here to help.", "You don't have to suffer through work stress alone. I'm here to support you."],
+      "context": [""]
+    },
+  {
+      "tag": "grief",
+      "patterns": ["I'm grieving the loss of a loved one", "I can't get over the death of someone close to me", "I'm so sad about losing someone"],
+      "responses": ["I'm sorry for your loss. Would you like to talk about your loved one?", "Grief is a difficult process. I'm here to listen if you want to talk.", "Losing someone you love is tough. I'm here to support you."],
+      "context": [""]
+    },
+   {
+      "tag": "self_harm",
+      "patterns": ["I'm feeling like hurting myself", "I've been cutting myself", "I'm having suicidal thoughts"],
+      "responses": ["I'm concerned to hear that. Your safety is important. Can you tell me more about how you're feeling?", "It's important to take care of yourself. Would you like to talk about what's going on?", "You don't have to go through this alone. I'm here to support you."],
+      "context": [""]
+    }
+   ]
+}
