@@ -2,13 +2,13 @@ import random
 import json
 import pickle
 import numpy as np
-
+import os
 import nltk
 from nltk.stem import WordNetLemmatizer
-import tensorflow
+import tensorflow as tf
 from tensorflow import keras
 from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
+from keras.layers import Dense, Activation, Dropout, Conv1D, MaxPooling1D, Flatten, Embedding
 from keras.optimizers import SGD
 
 
@@ -56,28 +56,40 @@ random.shuffle(training)
 train_x = np.array([i[0] for i in training])
 train_y = np.array([i[1] for i in training])
 
+# Load the pre-trained GloVe embeddings
+embeddings_index = {}
+f = open(os.path.join('', 'glove.6B.300d.txt'), encoding="utf-8")
+for line in f:
+    values = line.split()
+    word = values[0]
+    coefs = np.asarray(values[1:], dtype='float32')
+    embeddings_index[word] = coefs
+f.close()
+
+# Map the words to their corresponding embeddings
+embedding_matrix = np.zeros((len(words), 300))
+for i, word in enumerate(words):
+    embedding_vector = embeddings_index.get(word)
+    if embedding_vector is not None:
+        embedding_matrix[i] = embedding_vector
+
+from keras.optimizers import Adam
+
 model = Sequential()
-model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+model.add(Embedding(len(words), 300, weights=[embedding_matrix], input_length=len(train_x[0])))
+model.add(Conv1D(128, 5, activation='relu'))
+model.add(MaxPooling1D(pool_size=4))
+model.add(Conv1D(64, 5, activation='relu'))
+model.add(MaxPooling1D(pool_size=4))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
-model.add(Dense(64, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(len(train_y[0]), activation='softmax'))
+model.add(Dense(len(classes), activation='softmax'))
 
-sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+adam = Adam(lr=0.001)
+model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
 
-hist = model.fit(train_x,train_y, epochs=200, batch_size=5, verbose=1)
-model.save('chatbotmodel.h5', hist)
+hist = model.fit(train_x, train_y, epochs=100, batch_size=10, validation_split=0.2, verbose=1)
+model.save('chatbot_model_final.h5', hist)
 print("Done")
-
-
-
-
-
-
-
-
-
-
-
 

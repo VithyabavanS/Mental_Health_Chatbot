@@ -1,73 +1,135 @@
-{"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hey! Welcome to Mate.", "Hi there, I'm doing well! My name's Mate, what can I do for you?", "Hey there, my name's Mate, your mental health friend. How can I help you today?"],
-         "context": [""]
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["hello", "hi", "hey", "how are you", "what's up", "hi there", "good morning", "good afternoon", "good evening"],
+            "responses": ["Hello!", "Hi there!", "Hey!", "I'm doing well, thanks for asking.", "Not much, how about you?", "Nice to meet you!"],
+            "context": [""]
         },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you later! Take care!", "Have a lovely day! Take care and stay safe!", "Take care of yourself! I'm always here to support you! Feel free to come back at any time!"],
-         "context": [""]
+        {
+            "tag": "goodbye",
+            "patterns": ["bye", "goodbye", "see you later", "take care", "farewell", "have a good day", "have a nice day", "catch you later"],
+            "responses": ["Goodbye!", "See you later!", "Take care!", "Have a nice day!", "Farewell!"],
+            "context": [""]
         },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure"],
-         "context": [""]
+        {
+            "tag": "thanks",
+            "patterns": ["thank you", "thanks", "appreciate it", "much obliged", "grateful"],
+            "responses": ["You're welcome!", "No problem!", "My pleasure!", "Anytime!", "Glad to help!"],
+            "context": [""]
         },
-        {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-         "context": [""]
+        {
+            "tag": "exercise",
+            "patterns": [
+            "suggest some exercise",
+            "what exercises should I do",
+            "exercise suggestions",
+            "workout ideas",
+            "how to stay fit"],
+            "responses": [
+            "Some great exercises to try are push-ups, sit-ups, squats, and lunges.",
+            "Why not try going for a run or doing some yoga?",
+            "Have you considered trying weight lifting or going for a bike ride?"],
+            "context": [""]
         },
-        {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
-         "context": [""]
+        {
+            "tag": "music",
+            "patterns": [
+            "what kind of music should I listen to",
+            "suggest some music",
+            "music recommendations",
+            "what's your favorite music"],
+            "responses": [
+            "It really depends on your mood, but some great options are classical music, jazz, or some upbeat pop songs.",
+            "Try listening to some calming ambient music or some energetic electronic music.",
+            "Personally, I love listening to indie rock or hip hop. What about you?"],
+            "context": [""]
         },
-        {"tag": "adverse_drug",
-         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-         "responses": ["Navigating to Adverse drug reaction module"],
-         "context": [""]
+        {
+            "tag": "therapy",
+            "patterns": [
+            "I'm feeling sad",
+            "I'm feeling anxious",
+            "I'm feeling stressed",
+            "I need someone to talk to",
+            "can you give me some advice",
+            "what should I do when I'm feeling down"],
+            "responses": [
+            "I'm sorry to hear that. It's important to take care of yourself when you're feeling down. Maybe try going for a walk or talking to a friend or loved one. If you need professional help, consider reaching out to a therapist or counselor.",
+            "Remember that it's okay to not be okay. Try practicing some self-care activities like taking a bath or reading a book. If your feelings persist, consider seeking professional help.",
+            "It's brave of you to reach out for help. Have you considered journaling or practicing mindfulness? Those activities can be helpful when you're feeling overwhelmed."],
+            "context": [""]
         },
-        {"tag": "blood_pressure",
-         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
-         "responses": ["Navigating to Blood Pressure module"],
-         "context": [""]
+        {
+            "tag": "anxiety",
+            "patterns": [
+            "I feel anxious",
+            "I have anxiety",
+            "I can't stop worrying",
+            "How do I deal with anxiety?",
+            "I feel nervous all the time",
+            "I have trouble sleeping because of my anxiety",
+            "I think I have anxiety",
+              "What is anxiety?",
+              "Tell me about anxiety",
+              "Can I have some information about anxiety?",
+              "How do I support a loved one with anxiety?",
+              "How do I fix my anxiety?"],
+            "responses": [
+            "Anxiety can be tough to deal with, but there are ways to manage it. Have you tried deep breathing exercises or meditation? You can also try talking to a therapist or counselor about your feelings.",
+            "It's important to remember that anxiety is common and treatable. Some other techniques that may help include exercise, journaling, or limiting caffeine intake.", "I see that you want to learn more about anxiety, and how to support yourself or your loved ones. At the higest level, anxiety is your body's natural response to stress. It's a feeling of fear or apprehension about what's to come. The first day of school, going to a job interview, or giving a speech may cause most people to feel fearful and nervous. We all get anxious sometimes, but anxiety becomes a problem when it starts affecting your daily life drastically. The best thing that you can do to help reduce anxiety is to take a few deep breaths and talk to someone about what you're feeling. Some natural remedies that you can try include: getting enough sleep meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes. Support your friends and loved ones by checking up on them and just listening. Whatever you're feeling is valid."],
+            "context": [""]
         },
-        {"tag": "blood_pressure_search",
-         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
-         "responses": ["Please provide Patient ID", "Patient ID?"],
-         "context": ["search_blood_pressure_by_patient_id"]
+        {
+            "tag": "fallback",
+            "patterns": [],
+            "responses": [
+            "I'm sorry, I didn't understand. Could you please rephrase your question?",
+            "I'm not sure what you mean. Can you please clarify?",
+            "I'm having trouble understanding. Could you please try asking again in a different way?"],
+            "context": [""]
         },
-        {"tag": "search_blood_pressure_by_patient_id",
-         "patterns": [],
-         "responses": ["Loading Blood pressure result for Patient"],
-         "context": [""]
+        {
+            "tag": "depression",
+            "patterns": ["I feel sad all the time", "I have no energy", "I don't enjoy anything anymore", "What do I do if I'm depressed?", "I feel hopeless and helpless", "I'm struggling to get out of bed in the morning", "I don't want to do anything", "I'm having trouble concentrating", "I think I have depression",
+              "What is depression?",
+              "Tell me about depression",
+              "Can I have some information about depression?",
+              "How do I support a loved one with depression?",
+              "How do I fix my depression?"],
+            "responses": ["Depression can be overwhelming, but there are things you can do to feel better. Have you considered talking to a therapist or counselor? They can help you develop a treatment plan that works for you.", "Remember that depression is a medical condition and it's not your fault. Some other techniques that may help include exercise, getting enough sleep, and practicing self-care activities like taking a bath or reading a book.","I see that you want to learn more about depression, and how to support yourself or your loved ones. At the highest level, depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems. You may have trouble doing normal day-to-day activities, and sometimes you may feel as if life isn't worth living. All of us experience sadness and periods of time where things aren't that great. However, the difference in sadness and depression lies in the duration and magnitude of the problem. The best recommended course of treatment is to talk a therapist or psychiatrist who can help you find the best path for you. Everyone is different and what might work for one person might not work for another one. Some natural remedies that you can try include: getting enough sleep, meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes. Support your friends and loved ones by checking up on them and just listening. Whatever you're feeling is valid."],
+            "context": [""]
         },
-        {"tag": "pharmacy_search",
-         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
-         "responses": ["Please provide pharmacy name"],
-         "context": ["search_pharmacy_by_name"]
+        {
+            "tag": "loneliness",
+            "patterns": ["I feel alone", "I don't have any friends", "I'm lonely", "How can I make friends?", "I feel like nobody understands me", "I have trouble making friends", "I feel isolated", "I'm afraid of being rejected"],
+            "responses": ["Feeling lonely is tough, but there are ways to connect with others. Have you considered joining a club or group that aligns with your interests? You can also try volunteering or taking a class.", "Remember that it's okay to be alone sometimes, but if you're feeling lonely often, it's important to take action. Some other techniques that may help include reaching out to a friend or loved one, practicing self-compassion, or talking to a therapist."],
+            "context": [""]
         },
-        {"tag": "search_pharmacy_by_name",
-         "patterns": [],
-         "responses": ["Loading pharmacy details"],
-         "context": [""]
+        {
+            "tag": "self-esteem",
+            "patterns": ["I don't feel good about myself", "I'm not confident", "How can I boost my self-esteem?", "I'm always comparing myself to others", "I don't feel like I'm good enough", "I'm afraid of failure", "I feel like I'm not attractive", "I don't feel valued","I feel worthless",
+              "I don't like the way I look"
+            ],
+            "responses": ["Building self-esteem can take time, but it's worth it. Have you tried writing down your strengths and accomplishments? You can also try practicing positive self-talk or setting achievable goals.", "Remember that you are unique and worthy of love and respect. Some other techniques that may help include volunteering, taking care of your physical health, or focusing on your personal growth.","It's important to remember that everyone has their own unique qualities and strengths. Instead of focusing on what you don't like about yourself, try to identify your positive qualities and celebrate them.",
+          "It's common to compare ourselves to others, but remember that everyone's journey is different. Instead of comparing yourself to others, focus on your own personal growth and progress.",
+          "I understand that it can be difficult to feel good about yourself, but know that you are valuable and deserving of love and respect. Let's work together to build up your self-esteem.",
+          "It's okay to have moments where you feel worthless, but it's important to remember that those feelings don't define your worth as a person. Let's explore ways to improve your self-esteem."],
+            "context": [""]
         },
-        {"tag": "hospital_search",
-         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-         "responses": ["Please provide hospital name or location"],
-         "context": ["search_hospital_by_params"]
-        },
-        {"tag": "search_hospital_by_params",
-         "patterns": [],
-         "responses": ["Please provide hospital type"],
-         "context": ["search_hospital_by_type"]
-        },
-        {"tag": "search_hospital_by_type",
-         "patterns": [],
-         "responses": ["Loading hospital details"],
-         "context": [""]
+        {
+            "tag": "trauma",
+            "patterns": [
+            "I've experienced trauma",
+            "I can't stop thinking about what happened",
+            "How can I cope with trauma?",
+            "I feel like my trauma is affecting my daily life",
+            "I've been struggling to sleep after my traumatic experience"],
+            "responses": [
+            "Experiencing trauma can be incredibly difficult, but there is hope for healing. Have you considered talking to a therapist or counselor about your experience? They can help you develop coping strategies and work through your emotions.",
+            "Remember that healing from trauma is a process and it's okay to take your time. Some other techniques that may help include mindfulness practices, creative expression, or participating in a support group.",
+            "It takes courage to acknowledge and seek help for the impact of trauma. It's important to know that there is no right or wrong way to feel. What you're experiencing is valid and understandable."],
+            "context": [""]
         },
         {
           "tag": "about",
@@ -86,37 +148,7 @@
           ],
           "context": [""]
       },
-      {
-          "tag": "anxiety",
-          "patterns": [
-              "I think I have anxiety",
-              "What is anxiety?",
-              "Tell me about anxiety",
-              "Can I have some information about anxiety?",
-              "How do I support a loved one with anxiety?",
-              "How do I fix my anxiety?"
-          ],
-          "responses": [
-              "I see that you want to learn more about anxiety, and how to support yourself or your loved ones. At the higest level, anxiety is your body's natural response to stress. It's a feeling of fear or apprehension about what's to come. The first day of school, going to a job interview, or giving a speech may cause most people to feel fearful and nervous. We all get anxious sometimes, but anxiety becomes a problem when it starts affecting your daily life drastically. The best thing that you can do to help reduce anxiety is to take a few deep breaths and talk to someone about what you're feeling. Some natural remedies that you can try include: getting enough sleep meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes. Support your friends and loved ones by checking up on them and just listening. Whatever you're feeling is valid."
-          ],
-          "context": [""]
-      },
-      {
-          "tag": "depression",
-          "patterns": [
-              "I think I have depression",
-              "What is depression?",
-              "Tell me about depression",
-              "Can I have some information about depression?",
-              "How do I support a loved one with depression?",
-              "How do I fix my depression?"
-          ],
-          "responses": [
-              "I see that you want to learn more about depression, and how to support yourself or your loved ones. At the higest level, depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems. You may have trouble doing normal day-to-day activities, and sometimes you may feel as if life isn't worth living. All of us experience sadness and periods of time where things aren't that great. However, the difference in sadness and depression lies in the duration and magnitude of the problem. The best recommended course of treatment is to talk a therapist or psychiatrist who can help you find the best path for you. Everyone is different and what might work for one person might not work for another one. Some natural remedies that you can try include: getting enough sleep, meditating, staying active and exercising, eating a healthy diet, staying active and working out, avoiding alcohol, avoiding caffeine, and quitting smoking cigarettes. Support your friends and loved ones by checking up on them and just listening. Whatever you're feeling is valid."
-          ],
-          "context": [""]
-      },
-      {
+         {
           "tag": "schizophrenia",
           "patterns": [
               "I think I have schizophrenia",
@@ -131,7 +163,7 @@
           ],
           "context": [""]
       },
-      {
+         {
           "tag": "funny",
           "patterns": [
               "Tell me a joke!",
@@ -145,23 +177,7 @@
           ],
           "context": [""]
       },
-      {
-          "tag": "self-esteem",
-          "patterns": [
-              "I don't feel good about myself",
-              "I don't like the way I look",
-              "I always compare myself to others",
-              "I feel worthless"
-        ],
-         "responses": [
-          "It's important to remember that everyone has their own unique qualities and strengths. Instead of focusing on what you don't like about yourself, try to identify your positive qualities and celebrate them.",
-          "It's common to compare ourselves to others, but remember that everyone's journey is different. Instead of comparing yourself to others, focus on your own personal growth and progress.",
-          "I understand that it can be difficult to feel good about yourself, but know that you are valuable and deserving of love and respect. Let's work together to build up your self-esteem.",
-          "It's okay to have moments where you feel worthless, but it's important to remember that those feelings don't define your worth as a person. Let's explore ways to improve your self-esteem."
-        ],
-         "context": [""]
-      },
-          {
+         {
       "tag": "relationships",
       "patterns": [
         "My partner and I argue a lot",
@@ -177,7 +193,7 @@
       ],
       "context": [""]
     },
-    {
+        {
     "tag": "stress-management",
     "patterns": [
       "I feel stressed all the time",
@@ -193,29 +209,25 @@
     ],
     "context": [""]
   },
-  {
-      "tag": "feeling_lonely",
-      "patterns": ["I feel lonely", "I don't have anyone to talk to", "I feel isolated", "I feel disconnected"],
-      "responses": ["I'm sorry to hear that. Would you like to talk to me?", "You don't have to go through this alone. I'm here to listen.", "Feeling lonely is tough. I'm here to support you."],
-      "context": [""]
-    },
-  {
+        {
       "tag": "work_stress",
       "patterns": ["I'm so stressed at work", "I have too much work to do", "I'm overwhelmed by my job"],
       "responses": ["Work stress can be difficult. Would you like to talk about it?", "It sounds like work is really stressing you out. I'm here to help.", "You don't have to suffer through work stress alone. I'm here to support you."],
       "context": [""]
     },
-  {
+         {
       "tag": "grief",
       "patterns": ["I'm grieving the loss of a loved one", "I can't get over the death of someone close to me", "I'm so sad about losing someone"],
       "responses": ["I'm sorry for your loss. Would you like to talk about your loved one?", "Grief is a difficult process. I'm here to listen if you want to talk.", "Losing someone you love is tough. I'm here to support you."],
       "context": [""]
     },
-   {
+        {
       "tag": "self_harm",
       "patterns": ["I'm feeling like hurting myself", "I've been cutting myself", "I'm having suicidal thoughts"],
       "responses": ["I'm concerned to hear that. Your safety is important. Can you tell me more about how you're feeling?", "It's important to take care of yourself. Would you like to talk about what's going on?", "You don't have to go through this alone. I'm here to support you."],
       "context": [""]
     }
-   ]
+
+    ]
 }
+
