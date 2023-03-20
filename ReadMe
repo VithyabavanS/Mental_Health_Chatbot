@@ -1,0 +1,12 @@
+## Word Embeddings
+
+In this project, we use the pre-trained GloVe (Global Vectors for Word Representation) word embeddings with 300-dimensional vectors. The word embeddings file `glove.6b.300d.txt` can be downloaded from [Google Drive](https://drive.google.com/file/d/17qzlyjLpriEab9qtEkyRxJAIVA4BtEfs/view?usp=share_link), which contains 300-dimensional vectors for a vocabulary of 6 billion tokens.
+
+To use the word embeddings in your code, you can load them using a library like `gensim` in Python:
+
+```python
+from gensim.models import KeyedVectors
+
+# Load the GloVe word embeddings
+glove_path = 'path/to/glove.6b.300d.txt'
+glove_model = KeyedVectors.load_word2vec_format(glove_path, binary=False)
