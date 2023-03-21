@@ -17,7 +17,7 @@ words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 
 try:
-    model = keras.models.load_model('chatbot_model_final.h5')
+    model = keras.models.load_model('chatbotmodel.h5')
 except:
     print("Failed to load model")
 
