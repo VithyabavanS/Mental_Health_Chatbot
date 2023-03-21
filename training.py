@@ -90,6 +90,6 @@ adam = Adam(lr=0.001)
 model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
 
 hist = model.fit(train_x, train_y, epochs=100, batch_size=10, validation_split=0.2, verbose=1)
-model.save('chatbot_model_final.h5', hist)
+model.save('chatbotmodel.h5', hist)
 print("Done")
 
