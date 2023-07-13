@@ -15,12 +15,29 @@
           
         },
         {
-          "tag":"game_category",
+          "tag":"game_category1",
           "patterns":["action","suggest me some action games","recommend action games to play"],
-          "responses":["here are some popular action games: \n1.Assasin's Creed\n2.Call of duty\n3.Battlefield\n4.The witcher\n5.Batman "],
+          "responses":["here are some popular action games: \n1.Assasin's Creed\n2.Call of duty\n3.Battlefield\n4.The witcher\n5.Batman\n6.Farcry "],
           "context":[""]
         },
-        
+        {
+          "tag":"game_category2",
+          "patterns":["Racing","suggest me some racing games","recommend racing games to play"],
+          "responses":["here are some popular racing games: \n1.Need for speed\n2.Forza horizon\n3.The crew"],
+          "context":[""]
+        },
+        {
+          "tag":"game_category3",
+          "patterns":["open world","suggest me some open world games to play","recommend open world game to play"],
+          "responses":["here are some open world games: \n1.Grand theft auto\n2.The witcher\n3.The elder scroll skyrim\n4.Red Dead Redemption\n5.Horizon zero dawn"],
+          "context":[""]
+          
+        },
+        {
+          "tag":"game_category4",
+          "patterns":["Horror","suggest me some horror games to play","recommend horror game to play"],
+          "responses":["here are some Horror games: \n1.Outlast\n2.Dying light\n3.Resident evil\n4.Dead island\n5.Evil within"]
+        },
         {
             "tag": "goodbye",
             "patterns": ["bye", "goodbye", "see you later", "take care", "farewell", "have a good day", "have a nice day", "catch you later"],
