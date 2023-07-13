@@ -7,6 +7,21 @@
             "context": [""]
         },
         {
+          "tag": "game",
+          "patterns":["suggest a game", "recommend a game", "what game should I play"],
+          "responses":["what is your favourite category "],
+          "context":[""]
+        
+          
+        },
+        {
+          "tag":"game_category",
+          "patterns":["action","suggest me some action games","recommend action games to play"],
+          "responses":["here are some popular action games: \n1.Assasin's Creed\n2.Call of duty\n3.Battlefield\n4.The witcher\n5.Batman "],
+          "context":[""]
+        },
+        
+        {
             "tag": "goodbye",
             "patterns": ["bye", "goodbye", "see you later", "take care", "farewell", "have a good day", "have a nice day", "catch you later"],
             "responses": ["Goodbye!", "See you later!", "Take care!", "Have a nice day!", "Farewell!"],
@@ -38,12 +53,34 @@
             "what kind of music should I listen to",
             "suggest some music",
             "music recommendations",
-            "what's your favorite music"],
+            "recommend some music",
+            "recommend a song",
+            "suggest a song",
+            "what's your favorite music"
+            ],          
             "responses": [
             "It really depends on your mood, but some great options are classical music, jazz, or some upbeat pop songs.",
-            "Try listening to some calming ambient music or some energetic electronic music.",
+            "Try listening to some calming ambient music or some energetic electronic music.",                        
             "Personally, I love listening to indie rock or hip hop. What about you?"],
             "context": [""]
+        },
+        {
+           "tag":"recommend_music_jazz",
+           "patterns":["recommend some jazz music","suggest some jazz music","what jazz music shoud I listen"],
+           "responses":["Sure here some popular jazz songs: \n1 1. Autumn Leaves\n2. 2. Take Five\n3. 3. Moon River\n4. 4. Just the Two of Us"],
+           "context":[""]
+        },
+        {
+          "tag":"recommend_music_anxiety",
+          "patterns":["recommend music for reduce anxiety","suggest some songs to reduce anxiety","recommend songs for reduce anxiety","songs for anxiety"],
+          "responses":["sure here are popular songs for relax your mind: \n1 1. Some one like you\n2. 2. Water Mark\n3. 3. We can fly\n4. 4. Mellomaniac"],
+          "context":[""]
+        },
+        {
+          "tag":"play_song",
+          "patterns":["play a song","can you play some music?","I like to listen a song","play some music"],
+          "responses":["playing..."],
+          "context":[""]
         },
         {
             "tag": "therapy",
