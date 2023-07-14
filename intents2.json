@@ -39,6 +39,30 @@
           "responses":["here are some Horror games: \n1.Outlast\n2.Dying light\n3.Resident evil\n4.Dead island\n5.Evil within"]
         },
         {
+          "tag":"game_category_anxiety",
+          "patterns":["Suggest me some games to manage my anxiety","recommend some game good for anxiety","what games should i play to reduce anxiety","suggest game for anxiety"],
+          "responses":["here are some minigames for reduce your anxiety: \n1.Hangaroo\n2.Turkey tens\n3.Farmfactory\n4.save the love"],
+          "context":[""]
+        },
+        {
+          "tag":"game_category_depression",
+          "patterns":["Suggest me some games to manage my depression ","recommend some game good for depression","what games should i play to reduce depression"],
+          "responses":["here are some minigames for reduce your depression: \n1.Pizzaparty\n2.Hazelandmomsrecipescpumpkinmuffins\n3.Snowballchristmasworld\n4.Cupcakefrenzy"],
+          "context":[""]
+        },
+        {
+          "tag":"game_category_funny",
+          "patterns":["What are the funny minigames to play","I am in funny mood now what games can play","suggest some funny minigames","recommend some funny minigames"],
+          "responses":["here are some minigames to fun: \n1.Cutforcat2\n2.Ninjapainter\n3.Germageddon\n4.Customcarshop"],
+          "context":[""]
+        },
+        {
+          "tag":"play_game",
+          "patterns":["I want a play a game","open a game to play"],
+          "responses":["opening game"],
+          "context":[""]
+        },
+        {
             "tag": "goodbye",
             "patterns": ["bye", "goodbye", "see you later", "take care", "farewell", "have a good day", "have a nice day", "catch you later"],
             "responses": ["Goodbye!", "See you later!", "Take care!", "Have a nice day!", "Farewell!"],
@@ -63,6 +87,16 @@
             "Why not try going for a run or doing some yoga?",
             "Have you considered trying weight lifting or going for a bike ride?"],
             "context": [""]
+        },
+        {
+          "tag":"food",
+          "patterns":[
+            "suggest some healthy food for gain weight",
+            "what are the food should i eat to gain weight ",
+            "can you recommend foods for weight gain" ],
+          "responses":["sure! If your goal is gain weight you should eat chicken,fish,eggs,rice and potato"],
+          "context":[""]
+            
         },
         {
             "tag": "music",
@@ -194,8 +228,9 @@
               "What can you help me with?",
               "Is anyone there?",
               "Are you a real person?",
-              "Tell me about yourself!"
-          ],
+              "Tell me about yourself!",
+              "what is your name"
+          ],  
           "responses": [
               "Love that question! My name's Mate, your mental health friend! I've been trained to support you through any of the issues and things that you're going through in life right now. I'm all ears and want to support you through your ups and downs. Technically, I'm a computer that's been trained by a human, but I like to think of myself as human!",
               "Hey! I love that question! My name is Mate, and I want to be your mental health friend and support you! My fellow human friends have trained me to be a compassionate listener and support buddy when things are going well, and particularly when things aren't going so well."
