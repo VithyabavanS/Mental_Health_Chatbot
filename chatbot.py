@@ -1,8 +1,15 @@
 import random
 import json
 import pickle
+import webbrowser
+import pygame.mixer
+import addMinigames
+import os
+import music_player
+
 import numpy as np
 import re
+
 
 import nltk
 from nltk.stem import WordNetLemmatizer
@@ -85,6 +92,9 @@ def get_response(intents_list, intents_json):
     return result
 
 
+
+
+
 print("Go! Bot is running!")
 
 while True:
@@ -93,9 +103,15 @@ while True:
     if re.search(r'\b(goodbye|bye|see you later)\b', message, re.IGNORECASE):
         print("Goodbye!")
         break
+
     ints = predict_class(message, model)
     if len(ints) > 0:
         res = get_response(ints, intents)
         print(res)
+        if "i want to play a game" in message.lower():
+            addMinigames.play_game()
+        elif "play song" in message.lower():
+            music_player.play_song()
+
     else:
         print("Sorry, I didn't understand that")
