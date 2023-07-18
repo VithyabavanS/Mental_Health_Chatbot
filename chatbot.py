@@ -3,7 +3,7 @@ import json
 import pickle
 import webbrowser
 import pygame.mixer
-import addMinigames
+from addMinigames import open_game_by_category
 import os
 import music_player
 
@@ -88,6 +88,13 @@ def get_response(intents_list, intents_json):
     for i in list_of_intents:
         if i['tag'] == tag:
             result = random.choice(i['responses'])
+            if tag=='play_song':
+                print(result)
+                music_player.play_song()
+            elif tag=='play_game':
+                print("what is  your favourite category")
+                category = input("")
+                open_game_by_category(category)
             break
     return result
 
@@ -108,10 +115,13 @@ while True:
     if len(ints) > 0:
         res = get_response(ints, intents)
         print(res)
-        if "i want to play a game" in message.lower():
-            addMinigames.play_game()
-        elif "play song" in message.lower():
-            music_player.play_song()
+       # if "i want to play a game" in message.lower():
+           # print("what your category")
+            #category=input("")
+           # open_game_by_category(category)
+
+        #elif "play song" in message.lower():
+            #music_player.play_song()
 
     else:
         print("Sorry, I didn't understand that")
