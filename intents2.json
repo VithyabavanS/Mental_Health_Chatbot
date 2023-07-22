@@ -115,6 +115,18 @@
             "Personally, I love listening to indie rock or hip hop. What about you?"],
             "context": [""]
         },
+         {
+            "tag": "song",
+            "patterns": [
+                "top songs",
+                "best songs",
+                "hot songs",
+                " top 10 songs",
+                "top ten songs"
+            ],
+            "responses": [
+                "..."
+            ]
         {
            "tag":"recommend_music_jazz",
            "patterns":["recommend some jazz music","suggest some jazz music","what jazz music shoud I listen"],
