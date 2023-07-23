@@ -207,6 +207,7 @@
             "I'm having trouble understanding. Could you please try asking again in a different way?"],
             "context": [""]
         },
+        
         {
             "tag": "depression",
             "patterns": ["I feel sad all the time", "I have no energy", "I don't enjoy anything anymore", "What do I do if I'm depressed?", "I feel hopeless and helpless", "I'm struggling to get out of bed in the morning", "I don't want to do anything", "I'm having trouble concentrating", "I think I have depression",
@@ -348,5 +349,24 @@
     }
 
     ]
+     {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Get lost",
+                "Till next time",
+                "bbye"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day",
+                "Bye! Come back again soon."
+            ],
+            "context": [
+                ""
+            ]
+        },
 }
 
