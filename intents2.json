@@ -8,7 +8,7 @@
         },
         {
           "tag": "game",
-          "patterns":["suggest a game", "recommend a game", "what game should I play"],
+          "patterns":["suggest a game", "recommend a game", "what game should I play","suggest some games to play"],
           "responses":["what is your favourite category "],
           "context":[""]
         
@@ -58,13 +58,13 @@
         },
         {
           "tag":"play_game",
-          "patterns":["I want a play a game","open a game to play"],
+          "patterns":["I want  play a game","open a game to play","open a game for me","i like to play a game","im bored open a game","i want play game"],
           "responses":["opening game"],
           "context":[""]
         },
         {
             "tag": "goodbye",
-            "patterns": ["bye", "goodbye", "see you later", "take care", "farewell", "have a good day", "have a nice day", "catch you later"],
+            "patterns": ["bye", "goodbye", "see you later", "take care", "farewell", "have a good day", "have a nice day", "catch you later","quit chatbot"],
             "responses": ["Goodbye!", "See you later!", "Take care!", "Have a nice day!", "Farewell!"],
             "context": [""]
         },
@@ -93,7 +93,9 @@
           "patterns":[
             "suggest some healthy food for gain weight",
             "what are the food should i eat to gain weight ",
-            "can you recommend foods for weight gain" ],
+            "can you recommend foods for weight gain",
+            "can you recommend foods for weight gain"
+           ],
           "responses":["sure! If your goal is gain weight you should eat chicken,fish,eggs,rice and potato"],
           "context":[""]
             
@@ -115,18 +117,6 @@
             "Personally, I love listening to indie rock or hip hop. What about you?"],
             "context": [""]
         },
-         {
-            "tag": "song",
-            "patterns": [
-                "top songs",
-                "best songs",
-                "hot songs",
-                " top 10 songs",
-                "top ten songs"
-            ],
-            "responses": [
-                "..."
-            ]
         {
            "tag":"recommend_music_jazz",
            "patterns":["recommend some jazz music","suggest some jazz music","what jazz music shoud I listen"],
@@ -141,9 +131,35 @@
         },
         {
           "tag":"play_song",
-          "patterns":["play a song","can you play some music?","I like to listen a song","play some music"],
+          "patterns":["play a song","can you play some music?","I like to listen a song","play some music","play song for me","can you play a song"],
           "responses":["playing..."],
           "context":[""]
+        },
+        {
+          "tag":"stop_song",
+          "patterns":["stop song","stop","stop music"],
+          "responses":["song stopped"],
+          "context":[""]
+        },
+        {
+          "tag":"pause_song",
+          "patterns":["pause song","pause","pause music"],
+          "responses":["song paused"],
+          "context":[""]
+        },
+        {
+          "tag":"resume_song",
+          "patterns":["resume song","resume","resume music"],
+          "responses":[""],
+          "context":[""]
+
+        },
+        {
+          "tag":"exit_song",
+          "patterns":["exit song","quit song","exit","exit music","i want quit"],
+          "responses":["quited"],
+          "context":[""]
+
         },
         {
             "tag": "therapy",
@@ -159,24 +175,6 @@
             "Remember that it's okay to not be okay. Try practicing some self-care activities like taking a bath or reading a book. If your feelings persist, consider seeking professional help.",
             "It's brave of you to reach out for help. Have you considered journaling or practicing mindfulness? Those activities can be helpful when you're feeling overwhelmed."],
             "context": [""]
-        },
-        {
-            "tag": "thanks",
-            "patterns": [
-                "Thanks",
-                "Thank you",
-                "That's helpful",
-                "Awesome, thanks",
-                "Thanks for helping me"
-            ],
-            "responses": [
-                "Happy to help!",
-                "Any time!",
-                "My pleasure"
-            ],
-            "context": [
-                ""
-            ]
         },
         {
             "tag": "anxiety",
@@ -207,7 +205,6 @@
             "I'm having trouble understanding. Could you please try asking again in a different way?"],
             "context": [""]
         },
-        
         {
             "tag": "depression",
             "patterns": ["I feel sad all the time", "I have no energy", "I don't enjoy anything anymore", "What do I do if I'm depressed?", "I feel hopeless and helpless", "I'm struggling to get out of bed in the morning", "I don't want to do anything", "I'm having trouble concentrating", "I think I have depression",
@@ -349,24 +346,5 @@
     }
 
     ]
-     {
-            "tag": "goodbye",
-            "patterns": [
-                "Bye",
-                "See you later",
-                "Goodbye",
-                "Get lost",
-                "Till next time",
-                "bbye"
-            ],
-            "responses": [
-                "See you!",
-                "Have a nice day",
-                "Bye! Come back again soon."
-            ],
-            "context": [
-                ""
-            ]
-        },
 }
 
