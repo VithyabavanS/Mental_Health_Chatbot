@@ -207,9 +207,29 @@ If you encounter any issues or have questions:
 - Check the documentation
 - Review the example configurations
 
+## 👥 Team Contributions
+
+This is a collaborative group project with specialized roles:
+
+### 🧠 **Machine Learning & Training (My Contribution)**
+- **Neural Network Architecture Design**: Designed and implemented the CNN model with GloVe embeddings
+- **Training Pipeline Development**: Created the complete model training script with data preprocessing
+- **Intent Classification System**: Built the bag-of-words and lemmatization pipeline for text processing
+- **Model Optimization**: Fine-tuned hyperparameters, dropout rates, and training configurations
+- **Embedding Integration**: Implemented GloVe word embeddings for better semantic understanding
+- **Model Serialization**: Developed the model saving/loading system with pickle for vocabulary management
+
+### 🎮 **Other Team Contributions**
+- **Game Integration Module**: `addMinigames.py` - Game launcher functionality
+- **Music Player Module**: `music_player.py` - Music playback integration
+- **UI/UX Design**: User interaction and conversation flow
+- **Testing & Quality Assurance**: System testing and bug fixes
+
+> **Note**: I was specifically responsible for all aspects of the chatbot's AI training, including data preprocessing, model architecture, neural network implementation, and the complete machine learning pipeline.
+
 ---
 
 <div align="center">
-  <p>Made with ❤️ and 🧠 by [Your Name]</p>
+  <p>Made with ❤️ and 🧠 by our development team</p>
   <p>⭐ Star this repo if you found it helpful!</p>
 </div>
